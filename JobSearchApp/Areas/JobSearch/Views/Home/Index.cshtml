@@ -1,0 +1,98 @@
+﻿@model JobSearchApp.Models.ViewModel.IndexViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="container">
+        <div class="row">
+            @if (Model.TechnologyList.ToList().Count > 0)
+            {
+                <div class="border">
+                    <div class="carousel" class="carousel slide" data-ride="carousel" data-interval="2500">
+                        @for (int i = 0; i < Model.TechnologyList.Count(); i++)
+                        {
+                            if (i == 0)
+                            {
+                                <div class="carousel-item active">
+                                    @{
+                                        var base64 = Convert.ToBase64String(Model.TechnologyList.ToList()[i].Picture);
+                                        var imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
+                                    }
+
+                                    <img src="@imgsrc" height="300px" class="d-block" />
+                                </div>
+                                        }
+                                        else
+                                        {
+                                <div class="carousel-item">
+                                    @{
+                                        var base64 = Convert.ToBase64String(Model.TechnologyList.ToList()[i].Picture);
+                                        var imgsrc = string.Format("data:image/jpg;base64,{0}", base64);
+                                    }
+
+                                    <img src="@imgsrc" height="300px" class="d-block" />
+                                </div>
+                                            }
+                                        }
+                    </div>
+                </div>
+                                        }
+        </div>
+        <br />
+        <br />
+
+        <div style="padding-top:10px">
+            <form class="form-control" method="get">
+                <div class="row border border-info rounded col-12">
+                    <div class="col-8">
+                        <input class="form-control" id="SearchString" name="SearchString" type="text" placeholder="Search" value="@ViewData["SearchString"]">
+                    </div>
+                    <div class="col-4 text-right">
+                        <button class="btn btn-primary active" asp-action="Index"  asp-route-id="@ViewData["SearchString"]" type="submit">Search</button>
+                    </div>
+                </div>
+            </form>
+            </div>
+            <br />
+        <form>
+            <div class="row">
+                @foreach (var item in Model.JobList.ToList())
+                {
+                    <div class="border border-info rounded col-12" style="margin:10px 10px 10px 10px">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-12">
+                                <img src="@item.Company.Logo" alt="@item.Company.Name" width="99%" style="border-radius:5px;border:1px solid #bbb9b9" />
+                            </div>
+                            <div class="col-md-9 col-sm-12" style="padding-top:10px">
+                                <h2> @item.Title </h2>
+                                <div class="row col-12 text-justify d-none d-md-block">
+                                    <h4> @item.Company.Name </h4> 
+                                </div>
+                                <div class="row col-12 text-justify d-none d-md-block">
+                                    <span> @item.Location</span>
+                                </div>
+                                <div class="row col-12 text-justify d-none d-md-block">
+                                    <a href="@Html.Raw(item.Company.Url)" alt="@item.Company.Name">@item.Company.Name</a>
+                                </div>
+                                <div class="row col-12 text-justify d-none d-md-block">
+                                    <span> @item.Company.PhoneNumber</span>
+                                </div>
+                                <div class="row col-12 text-justify d-none d-md-block">
+                                    <span> <b> More than @item.Company.CompanySize Employees </b> </span>
+                                </div>
+                                <br /> <br />
+                                <div class="row col-12 text-justify d-none d-md-block">
+                                    <p>@Html.Raw(item.Description)</p>
+                                </div>
+                                <div class="col-md-3 col-sm-12 offset-md-9 text-center">
+                                   @*<a asp-controller ="Home" asp-action="Details" class="btn btn-primary active form-control" asp-route-id="@item.Id">Apply</a>*@
+                                    @Html.ActionLink("Apply", "Details", "Home", new { Id = item.Id }, new { @class = "btn btn-primary active" });
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            </form>
+        </div>

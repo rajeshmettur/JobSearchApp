@@ -1,0 +1,14 @@
+D:\Working\Javaj\JobSearchApp.DataAccess\bin\Debug\netcoreapp3.1\JobSearchApp.DataAccess.deps.json
+D:\Working\Javaj\JobSearchApp.DataAccess\bin\Debug\netcoreapp3.1\JobSearchApp.DataAccess.dll
+D:\Working\Javaj\JobSearchApp.DataAccess\obj\Debug\netcoreapp3.1\JobSearchApp.DataAccess.AssemblyInfoInputs.cache
+D:\Working\Javaj\JobSearchApp.DataAccess\obj\Debug\netcoreapp3.1\JobSearchApp.DataAccess.AssemblyInfo.cs
+D:\Working\Javaj\JobSearchApp.DataAccess\bin\Debug\netcoreapp3.1\JobSearchApp.DataAccess.pdb
+D:\Working\Javaj\JobSearchApp.DataAccess\obj\Debug\netcoreapp3.1\JobSearchApp.DataAccess.dll
+D:\Working\Javaj\JobSearchApp.DataAccess\obj\Debug\netcoreapp3.1\JobSearchApp.DataAccess.pdb
+D:\Working\Javaj\JobSearchApp.DataAccess\obj\Debug\netcoreapp3.1\JobSearchApp.DataAccess.csproj.CoreCompileInputs.cache
+D:\Working\Javaj\JobSearchApp.DataAccess\obj\Debug\netcoreapp3.1\JobSearchApp.DataAccess.csprojAssemblyReference.cache
+D:\Working\Javaj\JobSearchApp.DataAccess\bin\Debug\netcoreapp3.1\JobSearchApp.Models.dll
+D:\Working\Javaj\JobSearchApp.DataAccess\bin\Debug\netcoreapp3.1\JobSearchApp.Models.pdb
+D:\Working\Javaj\JobSearchApp.DataAccess\obj\Debug\netcoreapp3.1\JobSearchApp.DataAccess.csproj.CopyComplete
+D:\Working\Javaj\JobSearchApp.DataAccess\bin\Debug\netcoreapp3.1\JobSearchApp.Utility.dll
+D:\Working\Javaj\JobSearchApp.DataAccess\bin\Debug\netcoreapp3.1\JobSearchApp.Utility.pdb

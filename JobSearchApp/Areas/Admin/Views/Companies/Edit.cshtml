@@ -1,0 +1,85 @@
+﻿@model JobSearchApp.Models.Company
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Edit Company</h4>
+<hr />
+<div class="row">
+    <div class="col-md-10">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group row">
+                <div class="col-2">
+                    <label asp-for="Name" class="control-label"></label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="Name" class="form-control" />
+                </div>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label asp-for="Description" class="control-label"></label>
+                </div>
+                <div class="col-5">
+                    @Html.TextAreaFor(m => m.Description, new { @class = "form-control" })
+                </div>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label asp-for="CompanySize" class="control-label"></label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="CompanySize" class="form-control" />
+                </div>
+                <span asp-validation-for="CompanySize" class="text-danger"></span>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label asp-for="Url" class="control-label"></label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="Url" class="form-control" />
+                </div>
+                <span asp-validation-for="Url" class="text-danger"></span>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label asp-for="PhoneNumber" class="control-label"></label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="PhoneNumber" class="form-control" />
+                </div>
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label asp-for="Logo" class="control-label"></label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="Logo" type="file" id="projectImage" name="files" multiple class="form-control" />
+                </div>
+                <span asp-validation-for="Logo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    <div class="col-md-2">
+        <img src="~/images/company_logo.png" width="100%" style="border-radius:5px;border:1px solid #bbb9b9;" />
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

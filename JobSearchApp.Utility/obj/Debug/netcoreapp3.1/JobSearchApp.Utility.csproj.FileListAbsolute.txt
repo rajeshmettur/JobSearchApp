@@ -1,0 +1,8 @@
+D:\Working\Javaj\JobSearchApp.Utility\bin\Debug\netcoreapp3.1\JobSearchApp.Utility.deps.json
+D:\Working\Javaj\JobSearchApp.Utility\bin\Debug\netcoreapp3.1\JobSearchApp.Utility.dll
+D:\Working\Javaj\JobSearchApp.Utility\bin\Debug\netcoreapp3.1\JobSearchApp.Utility.pdb
+D:\Working\Javaj\JobSearchApp.Utility\obj\Debug\netcoreapp3.1\JobSearchApp.Utility.csproj.CoreCompileInputs.cache
+D:\Working\Javaj\JobSearchApp.Utility\obj\Debug\netcoreapp3.1\JobSearchApp.Utility.AssemblyInfoInputs.cache
+D:\Working\Javaj\JobSearchApp.Utility\obj\Debug\netcoreapp3.1\JobSearchApp.Utility.AssemblyInfo.cs
+D:\Working\Javaj\JobSearchApp.Utility\obj\Debug\netcoreapp3.1\JobSearchApp.Utility.dll
+D:\Working\Javaj\JobSearchApp.Utility\obj\Debug\netcoreapp3.1\JobSearchApp.Utility.pdb
